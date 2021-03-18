@@ -1,43 +1,29 @@
 <template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
-  <div class="container">
-    <D3_DIV_Bar :data="[10, 20, 30, 40]"></D3_DIV_Bar>
-  </div>
+  <Home />
+  <router-view></router-view>
 </template>
 
-<script>
-import { defineComponent } from "vue";
-import D3_DIV_Bar from "./components/D3_DIV_Bar.vue";
+<script setup>
+import Home from "./views/Home.vue";
 
-export default defineComponent({
-  name: "App",
-  components: {
-    D3_DIV_Bar,
-  },
-});
+// This starter template is using Vue 3 experimental <script setup> SFCs
+// Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
 </script>
 
 <style>
 html,
 body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-.container {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
 }
 </style>
