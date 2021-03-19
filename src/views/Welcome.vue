@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <h1>可视化示例</h1>
-    <span>vviz.</span>
+    <a href="https://github.com/vvizden/visualization-sharing" target="_blank">
+      @vviz.
+    </a>
   </div>
 </template>
 
