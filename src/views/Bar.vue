@@ -55,8 +55,6 @@ onMounted(() => {
 
   const interval = step - bandwidth;
 
-  console.log(bandwidth, step);
-
   let yScale = d3
     .scaleLinear()
     .domain([0, d3.max(data.map((e) => e.y))])
