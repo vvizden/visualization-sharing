@@ -40,10 +40,19 @@ const getNextPath = () => {
 </script>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed, defineProps } from "vue";
-import { useRouter } from "vue-router";
+import { ref, computed, watch } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
 const router = useRouter();
+const route = useRoute();
+
+const path = computed(() => {
+  return route.path;
+});
+
+watch(path, (newPath) => {
+  currentPathIndex = paths.findIndex((path) => path === newPath);
+});
 
 const width = ref(100);
 const height = ref(100);
