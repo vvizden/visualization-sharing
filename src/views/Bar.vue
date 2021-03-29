@@ -90,7 +90,4 @@ onMounted(() => {
   display: inline-block;
   background-color: #3e82f7;
 }
-
-.chart::v-deep(.bar-item + .bar-item) {
-}
 </style>
