@@ -163,6 +163,17 @@ onMounted(() => {
     .data(data)
     .join("rect")
     .attr("x", (d, i) => x(i))
+    .attr("y", (d) => 0)
+    .attr("height", (d) => y(0))
+    .attr("width", x.bandwidth())
+    .attr("fill", "#fff");
+
+  svg
+    .append("g")
+    .selectAll("rect")
+    .data(data)
+    .join("rect")
+    .attr("x", (d, i) => x(i))
     .attr("y", (d) => y(d.value))
     .attr("height", (d) => y(0) - y(d.value))
     .attr("width", x.bandwidth())
